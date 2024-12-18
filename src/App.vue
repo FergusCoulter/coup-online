@@ -1,19 +1,28 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+import {RouterView,RouterLink} from "vue-router";
+
+import {state} from "../socket.js";
+import {computed} from "vue";
+
+const connected = computed(() => {
+  return state.connected
+})
+
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
+  <h1>Hello App!</h1>
+  <p>
+    <strong>Current route path:</strong>
+  </p>
+  <nav>
+    <RouterLink to="/">Go to Home</RouterLink>
+    <RouterLink to="/about">Go to About</RouterLink>
+  </nav>
   <main>
-    <TheWelcome />
+    <RouterView />
   </main>
 </template>
 
