@@ -5,6 +5,7 @@ import {RouterView,RouterLink} from "vue-router";
 
 import {state} from "../socket.js";
 import {computed} from "vue";
+import {supabase} from "../supabase.js";
 
 const connected = computed(() => {
   return state.connected

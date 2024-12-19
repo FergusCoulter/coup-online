@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.47.9",
     "dotenv": "^16.4.7",
     "socket.io-client": "^4.8.1",
     "vue": "^3.5.13",
